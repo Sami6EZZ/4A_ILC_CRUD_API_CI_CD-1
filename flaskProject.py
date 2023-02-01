@@ -32,10 +32,23 @@ class Transaction:
     
     def __str__(self):
         return f"Transaction({self.sender}, {self.recipient}, {self.amount})"
+    
+#Création des comptes
+p1=Person("Mouad",2000)
+p2=Person("Mohammed",6000)
+p3=Person("Sisi",2500)
+p4=Person("Nic",3500)
+p5=Person("yassine",8000)
+p6=Person("simo",100)
+
+#création des transactions
+t1=Transaction(p1,p2,100)
+t2=Transaction(p2,p5,200)
+t3=Transaction(p4,p3,200)
 
    
 #creation des deux tables persons et transactions qui seront remplies des infos recupérées du fichier csv fourni
-persons = []
+persons=[p1,p2,p3,p4,p5,p6]
 transactions = []
 
 #recupérer les infos du fichiers csv
@@ -58,21 +71,9 @@ def load_data_from_csv(file_path):
             recipient_person.credit(int(amount))
             
             
-#Création des comptes
-p1=Person("Mouad",2000)
-p2=Person("Mohammed",6000)
-p3=Person("Sisi",2500)
-p4=Person("Nic",3500)
-p5=Person("yassine",8000)
-p6=Person("simo",100)
 
-#création des transactions
-t1=Transaction(p1,p2,100)
-t2=Transaction(p2,p5,200)
-t3=Transaction(p4,p3,200)
 
 #Création des listes : "personne" contenant des objets de type "Personne" et "transaction" contenant des objets de type "Transaction" 
-personnes=[p1,p2,p3,p4,p5,p6]
 _transactions=[t1,t2,t3]
 
 #Définition de la route principale de l'application, uniquement accessible via une requête HTTP GET pour récupérer des données.
@@ -98,6 +99,15 @@ def printAll():
 def get_transactions():
     load_data_from_csv('transactions.csv')
     return "\n".join(str(t) for t in transactions)
+
+#endpoint persons qui affiche les personnes ayant deja effectué une transaction depuis le fichier csv.
+@app.route("/persons", methods=["GET"]) 
+def get_persons():
+    load_data_from_csv('transactions.csv')
+    #print(persons)
+    return "\n".join(str(p) for p in persons)
+
+
 
 #endpoint person qui permet d'ajouter une personne de type Person ayant name et balance.
 @app.route("/person", methods=["POST"])
