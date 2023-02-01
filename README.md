@@ -57,5 +57,8 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
 App build :
 ![Generic badge](https://github.com/mouadw/4A_ILC_CRUD_API/actions/workflows/app_build.yml/badge.svg)
 
+Build and push tag :
+![Generic badge](https://github.com/mouadw/4A_ILC_CRUD_API/actions/workflows/build_push.yml/badge.svg)
+
 Build docker image :
 ![Generic badge](https://github.com/mouadw/4A_ILC_CRUD_API/actions/workflows/buildDockerImage.yml/badge.svg)
