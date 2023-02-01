@@ -148,6 +148,14 @@ def add_transaction():
     
     return {"message": "Transaction added successfully"}, 200
 
+#donner le solde de la personne prise en compte
+@app.route('/balance/<name>', methods=['GET'])
+def get_balance(name):
+    person = next((p for p in persons if p.name == name), None)
+    if person:
+        balance = person.balance
+        return jsonify({"name": person.name, "balance": balance})
+    return jsonify({"error": "Person not found"}), 404
     
 if __name__ == "__main__":
     print(transactions)
