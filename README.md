@@ -44,10 +44,12 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
     Dans une commande CURL : ``curl -X GET "http://localhost:5000/transactions"``
      
 -Utlisiez la route '/person' qui permet d'ajouter une personne de type Person ayant un nom: name et un solde: balance.
-     Executez cette fonction avec la commande CURL suivte :
+     Executez cette fonction avec la commande CURL suivante :
               ``curl -X POST -d "name=Jerome&balance=5" http://localhost:5000/person``
-
-
+              
+-Utilisez la route 'person/id' qui permet de supprimer une personne en donnant son id
+     Executez cette fonction avec la commande CURL suivante :
+          ``curl -X DELETE http://localhost:5000/person/1``
 
 
 ## Vous trouverez ci-dessus les différentes actions dont on a besoin dans ce projet : 
