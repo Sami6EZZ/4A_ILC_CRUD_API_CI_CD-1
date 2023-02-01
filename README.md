@@ -56,6 +56,12 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
      Executez cette fonction avec la commande CURL suivante :
           ``curl -X DELETE http://localhost:5000/person/1``
 
+-Utlisiez la route '/transaction' qui permet de créer une nouvelle transaction en leur donnant un émetteur, un recepteur et le montant de la transaction.
+    Executez cette fonction avec la commande CURL suivante :
+                ``curl -X POST -d "sender=Simo&receiver=Mouad&amount=100" http://localhost:5000/transaction``
+                !! attention, il faudra bien que le nom du sender our receiver soit dans la liste persons.
+
+      
 
 ## Vous trouverez ci-dessus les différentes actions dont on a besoin dans ce projet : 
 
