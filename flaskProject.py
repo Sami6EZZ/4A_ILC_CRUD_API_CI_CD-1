@@ -92,6 +92,14 @@ def printAll():
     else:
         return "Invalid request method"
     
+    
+ #endpoint transactions qui affiche les transactions entre 2 personnes depuis le fichier csv.
+@app.route("/transactions", methods=["GET"]) 
+def get_transactions():
+    load_data_from_csv('transactions.csv')
+    return "\n".join(str(t) for t in transactions)
+
+    
 if __name__ == "__main__":
     print(transactions)
     if len(sys.argv) > 1 :
