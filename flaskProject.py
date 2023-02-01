@@ -108,7 +108,17 @@ def add_person():
     persons.append(person)
     return "Person added."
 
-
+#endpoint person/id qui permet de supprimer une personne de la liste persons
+@app.route('/person/<int:person_id>', methods=['DELETE'])
+def delete_person(person_id):
+    person = next((person for person in persons if person['id'] == person_id), None)
+    if person:
+        persons.remove(person)
+        return {"message": "Person deleted successfully"}, 200
+    else:
+        return {"error": "Person not found"}, 404
+    
+    
 if __name__ == "__main__":
     print(transactions)
     if len(sys.argv) > 1 :
