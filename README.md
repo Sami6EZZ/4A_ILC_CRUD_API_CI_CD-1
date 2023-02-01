@@ -25,6 +25,8 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
 
 -Route pour afficher toutes les personnes et les transactions
 
+-Route pour affichier les transactions sauvegargdées dans un fichier csv entre 2 personnes.
+
 ## Utilisation :
 
 -Installation de flask avec :
