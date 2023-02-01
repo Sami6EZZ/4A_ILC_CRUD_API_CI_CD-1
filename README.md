@@ -43,3 +43,6 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
 
 
 ## Vous trouverez ci-dessus les différentes actions dont on a besoin dans ce projet : 
+
+App build :
+![Generic badge](https://github.com/mouadw/4A_ILC_CRUD_API/actions/workflows/app_build.yml/badge.svg)
