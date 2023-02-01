@@ -99,7 +99,16 @@ def get_transactions():
     load_data_from_csv('transactions.csv')
     return "\n".join(str(t) for t in transactions)
 
-    
+#endpoint person qui permet d'ajouter une personne de type Person ayant name et balance.
+@app.route("/person", methods=["POST"])
+def add_person():
+    name = request.form.get("name")
+    balance = request.form.get("balance")
+    person = Person(name, balance)
+    persons.append(person)
+    return "Person added."
+
+
 if __name__ == "__main__":
     print(transactions)
     if len(sys.argv) > 1 :
