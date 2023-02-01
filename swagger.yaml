@@ -19,9 +19,14 @@ paths:
           
   /transactions:
     get:
-      tags:
-        - transaction
-      summary: 
+      description: Get the transactions between two people from a CSV file
+      responses:
+        200:
+          description: A list of transactions
+          content:
+            text/plain:
+              schema:
+                type: string
           
   /persons:
     get:
