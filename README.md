@@ -3,3 +3,16 @@
   </P>
   
 Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'un système de transaction, où on mettra en place ce que nous avons appris cette année avec le module de CI/CD
+
+
+## Noms et prénoms du binôme : 
+  WALY Mouad, EL YOUSFI Mohammed 
+
+
+## Spécialité : 
+  ILC.
+
+## Le langage que nous souhaitons utiliser est :
+  Python parce que, qui n'aime pas python!
+
+## Vous trouverez ci-dessus les différentes actions dont on a besoin dans ce projet : 
