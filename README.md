@@ -9,7 +9,7 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
 
 
 ## Noms et prénoms du trinôme : 
-  WALY Mouad, EL YOUSFI Mohammed et EZZAHID Sami
+  WALY Mouad et EL YOUSFI Mohammed.
 
 
 ## Spécialité : 
