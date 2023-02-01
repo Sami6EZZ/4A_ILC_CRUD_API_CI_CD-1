@@ -126,4 +126,76 @@ paths:
                         type: string
                         
                         
-                 
+  /transactions/{person}:
+    get:
+      summary: List transactions of a person
+      operationId: getTransactions
+      parameters:
+        - name: person
+          in: path
+          description: Name of the person
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Transactions of the person
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    sender:
+                      type: string
+                      description: Sender name
+                    receiver:
+                      type: string
+                      description: Receiver name
+                    amount:
+                      type: integer
+                      description: Amount of the transaction
+        404:
+          description: Person not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string             
+  
+  
+   /balance/{name}:
+      get:
+        summary: Get balance of a person
+        operationId: getBalance
+        parameters:
+          - name: name
+            in: path
+            description: Name of the person
+            required: true
+            schema:
+              type: string
+        responses:
+          200:
+            description: Balance of the person
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    balance:
+                      type: integer
+          404:
+            description: Person not found
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    error:
+                      type: string
