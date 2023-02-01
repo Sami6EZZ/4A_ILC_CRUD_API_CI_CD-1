@@ -35,6 +35,11 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
 -Utilisez la route '/' pour afficher toutes les personnes et les transactions. 
     Dans un navigateur web : http://localhost:5000/
     Dans une commande CURL : curl -X GET "http://localhost:5000/"
+    
+-Utiliser la route'/transactions' qui affiche la liste des transactions effectuées qui sont été lises du fichier transactions.csv
+     Dans un navigateur web : http://localhost:5000/transactions
+     Dans une commande CURL : curl -X GET "http://localhost:5000/transactions"
+
 
 
 ## Vous trouverez ci-dessus les différentes actions dont on a besoin dans ce projet : 
