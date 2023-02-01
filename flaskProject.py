@@ -156,6 +156,14 @@ def get_balance(name):
         balance = person.balance
         return jsonify({"name": person.name, "balance": balance})
     return jsonify({"error": "Person not found"}), 404
+
+
+#lister l'ensemble des transactions par personne 
+@app.route('/transactions/<person>', methods=['GET'])
+def getTransactions(person):
+    person_transactions = [t for t in _transactions if t.sender == person or t.recipient == person]
+    return jsonify([{'sender': t.sender, 'receiver': t.recipient, 'amount': t.amount} for t in person_transactions])
+    
     
 if __name__ == "__main__":
     print(transactions)
