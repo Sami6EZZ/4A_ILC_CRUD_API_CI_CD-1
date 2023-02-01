@@ -96,3 +96,8 @@ Build and push tag :
 
 Build docker image :
 ![Generic badge](https://github.com/mouadw/4A_ILC_CRUD_API_CI_CD/actions/workflows/buildDockerImage.yml/badge.svg)
+
+Pull req :
+![Generic badge](https://github.com/mouadw/4A_ILC_CRUD_API_CI_CD/actions/workflows/pullReq.yml/badge.svg)
+
+
