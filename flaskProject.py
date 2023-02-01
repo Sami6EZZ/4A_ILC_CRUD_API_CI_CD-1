@@ -56,3 +56,21 @@ def load_data_from_csv(file_path):
             transactions.append(transaction)
             sender_person.debit(int(amount))
             recipient_person.credit(int(amount))
+            
+            
+#Création des comptes
+p1=Person("Mouad",2000)
+p2=Person("Mohammed",6000)
+p3=Person("Sisi",2500)
+p4=Person("Nic",3500)
+p5=Person("yassine",8000)
+p6=Person("simo",100)
+
+#création des transactions
+t1=Transaction(p1,p2,100)
+t2=Transaction(p2,p5,200)
+t3=Transaction(p4,p3,200)
+
+#Création des listes : "personne" contenant des objets de type "Personne" et "transaction" contenant des objets de type "Transaction" 
+personnes=[p1,p2,p3,p4,p5,p6]
+_transactions=[t1,t2,t3]
