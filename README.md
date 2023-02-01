@@ -66,6 +66,13 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
         Navigateur web : ``http://localhost:5000/balance/Mouad ``
         Commande CURL :  ``curl -X GET "http://localhost:5000/balance/Mouad"``
         !!Attention il faudra bien que le nom donné soit dans la liste persons.
+        
+ -Utlisize la route '/transactions/name' qui peremt d'afficher la liste des transactions de la personne donnée dans le parametre name.
+    Executer cette fonction avec :
+        Navigateur web : ``http://localhost:5000/transactions/Mouad ``
+        Commande CURL :  ``curl -X GET "http://localhost:5000/transactions/Mouad"``
+        !!Attention il faudra bien que le nom donné soit dans la liste persons.
+        la personne a deja effectué une transaction  sinon cela renvoit une liste vide.
 
 ## Vous trouverez ci-dessus les différentes actions dont on a besoin dans ce projet : 
 
