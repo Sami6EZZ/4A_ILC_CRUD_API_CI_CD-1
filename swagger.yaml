@@ -17,3 +17,113 @@ paths:
         '200':
           description: Affichage des personnes et des transactions sur la page.
           
+  /transactions:
+    get:
+      tags:
+        - transaction
+      summary: 
+          
+  /persons:
+    get:
+      description: Get all persons
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Successful operation
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                name:
+                  type: string
+                balance:
+                  type: number
+   /person:
+    post:
+      description: Add a person
+      parameters:
+        - in: formData
+          name: name
+          type: string
+          required: true
+        - in: formData
+          name: balance
+          type: number
+          required: true
+      responses:
+        200:
+          description: Successful operation
+          schema:
+            type: string               
+                  
+   /person/{person_id}:
+    delete:
+      parameters:
+      - name: person_id
+        in: path
+        required: true
+        type: integer
+      responses:
+        200:
+          description: Person deleted successfully
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                description: Success message
+        404:
+          description: Person not found
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: Error message               
+       
+     
+     /transaction:
+        post:
+          summary: Add a transaction
+          operationId: addTransaction
+          requestBody:
+            required: true
+            content:
+              application/x-www-form-urlencoded:
+                schema:
+                  type: object
+                  properties:
+                    sender:
+                      type: string
+                      description: Sender name
+                    receiver:
+                      type: string
+                      description: Receiver name
+                    amount:
+                      type: integer
+                      description: Amount of the transaction
+                      minimum: 1
+          responses:
+            200:
+              description: Transaction added successfully
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+            400:
+              description: Sender or receiver not found
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      error:
+                        type: string
+                        
+                        
+                 
