@@ -8,7 +8,7 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
 
 
 
-## Noms et prénoms du trinôme : 
+## Noms et prénoms du binôme : 
   WALY Mouad et EL YOUSFI Mohammed.
 
 
