@@ -32,3 +32,8 @@ class Transaction:
     
     def __str__(self):
         return f"Transaction({self.sender}, {self.recipient}, {self.amount})"
+
+   
+#creation des deux tables persons et transactions qui seront remplies des infos recupérées du fichier csv fourni
+persons = []
+transactions = []
