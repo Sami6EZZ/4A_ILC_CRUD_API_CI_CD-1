@@ -1,0 +1,19 @@
+openapi: 3.0.3
+info:
+  title: Swagger WALY El YOUSFI
+  description: |-
+    Ce projet utilise Flask pour créer une application Web qui permet de gérer des transactions. 
+  version: 2.0.0
+servers:
+  - url: https://petstore3.swagger.io/api/v3
+paths:
+  /:
+    get:
+      tags:
+        - transaction
+      summary: Affiche les personnes et les transactions déjà enregistées
+      operationId: main
+      responses:
+        '200':
+          description: Affichage des personnes et des transactions sur la page.
+          
