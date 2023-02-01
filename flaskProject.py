@@ -53,18 +53,26 @@ transactions = []
 
 #recupérer les infos du fichiers csv
 def load_data_from_csv(file_path):
+    #ouvrir le fichier en mode lecture
     with open(file_path, "r") as f:
+        #creation d'un objet csv pour lire le fichier
         reader = csv.reader(f, delimiter=";")
         for row in reader:
+            # Déballer les valeurs de chaque ligne dans des variables 
             sender, recipient, amount = row
+            # Vérifier si un objet Person avec le nom de l'expéditeur existe dans la liste persons
             sender_person = next((p for p in persons if p.name == sender), None)
+            # Si non, créer un nouvel objet Person et l'ajouter à la liste persons
             if not sender_person:
                 sender_person = Person(sender, 0)
                 persons.append(sender_person)
+            # Vérifier si un objet Person avec le nom du destinataire existe dans la liste persons
             recipient_person = next((p for p in persons if p.name == recipient), None)
+            # Si non, créer un nouvel objet Person et l'ajouter à la liste persons
             if not recipient_person:
                 recipient_person = Person(recipient, 0)
                 persons.append(recipient_person)
+            # Créer un nouvel objet Transaction avec les informations d'expéditeur, de destinataire et de montant   
             transaction = Transaction(sender, recipient, int(amount))
             transactions.append(transaction)
             sender_person.debit(int(amount))
