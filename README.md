@@ -15,14 +15,14 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
 ## Le langage que nous souhaitons utiliser est :
   Python parce que, qui n'aime pas python!
   
-##Fonctionnalités :
+## Fonctionnalités :
 
 -Initialisation de l'application Flask
 -Création d'une classe Personne qui permet de créer des objets Personne avec un nom et un sodle. Les objets Personne peuvent être converties en objets JSON, avoir des méthodes pour débiter ou créditer un compte, effectuer une transaction entre deux personnes.
 -Méthode pour importer un fichier CSV de personnes
 -Route pour afficher toutes les personnes et les transactions
 
-##Utilisation :
+## Utilisation :
 
 -Installation de flask avec :
     pip install flask
