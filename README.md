@@ -61,7 +61,11 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
                 ``curl -X POST -d "sender=Simo&receiver=Mouad&amount=100" http://localhost:5000/transaction``
                 !! attention, il faudra bien que le nom du sender our receiver soit dans la liste persons.
 
-      
+ -Utlisize la route '/balance/<name>' qui peremt d'afficher le solde de la personne donnée dans le parametre name.
+    Executer cette fonction avec :
+        Navigateur web : ``http://localhost:5000/balance/Mouad ``
+        Commande CURL :  ``curl -X GET "http://localhost:5000/balance/Mouad"``
+        !!Attention il faudra bien que le nom donné soit dans la liste persons.
 
 ## Vous trouverez ci-dessus les différentes actions dont on a besoin dans ce projet : 
 
