@@ -42,6 +42,11 @@ Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'u
 -Utilisez la route'/transactions' qui affiche la liste des transactions effectuées qui sont été lises du fichier transactions.csv.
     Dans un navigateur web : http://localhost:5000/transactions
     Dans une commande CURL : ``curl -X GET "http://localhost:5000/transactions"``
+    
+-Utilisez la route'/persons' qui affiche la liste des personnes crées et leurs soldes apres avoir chargé les transactions du fichier csv.
+    Dans un navigateur web : http://localhost:5000/persons
+    Dans une commande CURL : ``curl -X GET "http://localhost:5000/persons"``
+    
      
 -Utlisiez la route '/person' qui permet d'ajouter une personne de type Person ayant un nom: name et un solde: balance.
      Executez cette fonction avec la commande CURL suivante :
