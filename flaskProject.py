@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request
 import sys
 import csv
+from flask import jsonify
 
 #Création de notre application flask
 app = Flask(__name__)
