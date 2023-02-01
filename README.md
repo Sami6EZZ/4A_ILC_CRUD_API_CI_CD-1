@@ -4,6 +4,9 @@
   
 Le projet qu'on souhaite réaliser est un projet guidé pour la gestion CRUD d'un système de transaction, où on mettra en place ce que nous avons appris cette année avec le module de CI/CD
 
+![Badge1](https://www.plunge.cloud/hs-fs/hubfs/cycle-devopsea2b.png?width=600&name=cycle-devops.png)
+
+
 
 ## Noms et prénoms du binôme : 
   WALY Mouad, EL YOUSFI Mohammed 
