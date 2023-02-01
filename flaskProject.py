@@ -127,7 +127,27 @@ def delete_person(person_id):
         return {"message": "Person deleted successfully"}, 200
     else:
         return {"error": "Person not found"}, 404
+ 
+#endpoint /transaction qui sert a ajouter une transaction en prenant en argument l'emetteur, le recepteur et la somme de l'envoi
+@app.route('/transaction', methods=['POST'])
+def add_transaction():
+    sender_name = request.form['sender']
+    receiver_name = request.form['receiver']
+    amount = int(request.form['amount'])
     
+    sender = next((person for person in persons if person.name == sender_name), None)
+    receiver = next((person for person in persons if person.name == receiver_name), None)
+    
+    if sender is None or receiver is None:
+        return {"error": "Sender or receiver not found"}, 400
+    
+    sender.balance -= amount
+    receiver.balance += amount
+    
+    transactions.append(Transaction(sender_name, receiver_name, amount))
+    
+    return {"message": "Transaction added successfully"}, 200
+
     
 if __name__ == "__main__":
     print(transactions)
