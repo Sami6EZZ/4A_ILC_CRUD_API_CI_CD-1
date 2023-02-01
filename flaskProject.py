@@ -128,9 +128,9 @@ def add_person():
     return "Person added."
 
 #endpoint person/id qui permet de supprimer une personne de la liste persons
-@app.route('/person/<int:person_id>', methods=['DELETE'])
-def delete_person(person_id):
-    person = next((person for person in persons if person['id'] == person_id), None)
+@app.route('/person/<name>', methods=['DELETE'])
+def delete_person(name):
+    person = next((person for person in persons if person['id'] == name), None)
     if person:
         persons.remove(person)
         return {"message": "Person deleted successfully"}, 200
