@@ -74,3 +74,20 @@ t3=Transaction(p4,p3,200)
 #Création des listes : "personne" contenant des objets de type "Personne" et "transaction" contenant des objets de type "Transaction" 
 personnes=[p1,p2,p3,p4,p5,p6]
 _transactions=[t1,t2,t3]
+
+#Définition de la route principale de l'application, uniquement accessible via une requête HTTP GET pour récupérer des données.
+@app.route("/", methods=['GET'])
+def printAll():
+    if request.method == 'GET':
+        res = "<h1>Liste des personnes :</h1><ul>"
+        for person in personnes:
+            res += "<li>NOM : " + person.name  + " / SOLDE COMPTE : " + '%.2f' % person.balance + "€</li>"
+        res += "</ul><h1>Liste des transactions :</h1><ul>"
+        #for transaction in _transactions:
+        res += "<li>P1 : " + p1.name +  " / P2 : " + p2.name+  ":   Montant de la transaction : 100€  : " 
+        res += "<li>P1 : " + p2.name +  " / P2 : " + p5.name+  ":   Montant de la transaction : 200€  : " 
+        res += "<li>P1 : " + p4.name +  " / P2 : " + p3.name+  ":   Montant de la transaction : 200€  : " 
+
+        return res+"</ul>"
+    else:
+        return "Invalid request method"
