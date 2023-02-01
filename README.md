@@ -58,7 +58,7 @@ App build :
 ![Generic badge](https://github.com/mouadw/4A_ILC_CRUD_API_CI_CD/actions/workflows/app_build.yml/badge.svg)
 
 Build and push tag :
-![Generic badge](https://github.com/mouadw/4A_ILC_CRUD_API_CI_CD/actions/workflows/build_push.yml)
+![Generic badge](https://github.com/mouadw/4A_ILC_CRUD_API_CI_CD/actions/workflows/build_push.yml/badge.svg)
 
 Build docker image :
 ![Generic badge](https://github.com/mouadw/4A_ILC_CRUD_API_CI_CD/actions/workflows/buildDockerImage.yml/badge.svg)
